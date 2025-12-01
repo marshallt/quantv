@@ -50,7 +50,7 @@ a {
 }
 
 .section {
-  padding: 64px 0;
+  padding: 40px 0;
 }
 
 .section-alt {
@@ -329,7 +329,7 @@ a {
   max-width: 14px;
   border-radius: 999px;
   background: linear-gradient(to top, rgba(56, 189, 248, 0.2), rgba(56, 189, 248, 0.9));
-  height: var(--h);
+  height: var(--h, 100px);
 }
 
 /* Hero metrics */
@@ -424,6 +424,15 @@ a {
   font-size: 14px;
   color: var(--text-soft);
   margin: 0;
+}
+
+/* Ensure good contrast for section headings on dark background sections */
+.section:not(.section-alt) .section-title {
+  color: #e5e7eb;
+}
+
+.section:not(.section-alt) .section-subtitle {
+  color: #cbd5f5;
 }
 
 /* Cards & grids */
